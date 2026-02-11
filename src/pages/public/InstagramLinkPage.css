@@ -1,0 +1,953 @@
+/* Instagram Link Page Styles */
+.instagram-link-page {
+  min-height: 100vh;
+  position: relative;
+  padding: 20px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+}
+
+.instagram-link-page::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('/assets/images/fans-loyalty.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: blur(6px);
+  opacity: 1;
+  z-index: 0;
+}
+
+.instagram-link-page::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(26, 26, 26, 0.7) 0%, rgba(45, 45, 45, 0.7) 100%);
+  z-index: 1;
+}
+
+.ilp-container {
+  max-width: 680px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+  animation: fadeInUp 0.6s ease;
+}
+
+/* Intégration du système de réservation moderne */
+.ilp-booking-section {
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.85) 0%, rgba(20, 20, 20, 0.75) 100%) !important;
+  border: 2px solid rgba(229, 9, 20, 0.5) !important;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4) !important;
+}
+
+.ilp-booking-section::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(135deg, #E50914, #ff4757);
+  border-radius: 18px;
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.ilp-booking-section:hover::before {
+  opacity: 0.1;
+}
+
+.ilp-booking-section .ilp-link-title {
+  color: #ffffff !important;
+  font-weight: 700 !important;
+  font-size: 22px !important;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8);
+  margin-bottom: 12px !important;
+}
+
+.ilp-booking-section .ilp-link-description {
+  color: rgba(255, 255, 255, 0.95) !important;
+  font-weight: 500 !important;
+  font-size: 16px !important;
+  line-height: 1.5 !important;
+  margin-bottom: 24px !important;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.8);
+}
+
+.modern-booking-container {
+  margin-top: 24px;
+  width: 100%;
+}
+
+/* Widget Calendly intégré */
+.ilp-booking-section .calendly-inline-widget {
+  background: rgba(0, 0, 0, 0.5) !important;
+  border-radius: 16px !important;
+  overflow: hidden !important;
+  backdrop-filter: blur(15px) !important;
+  -webkit-backdrop-filter: blur(15px) !important;
+  border: 2px solid rgba(229, 9, 20, 0.2) !important;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3) !important;
+}
+
+/* Headers du sélecteur d'expert */
+.ilp-booking-section .expert-selector-header h2 {
+  color: #ffffff !important;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3) !important;
+  margin-bottom: 8px !important;
+}
+
+.ilp-booking-section .expert-selector-header p {
+  color: rgba(255, 255, 255, 0.9) !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2) !important;
+}
+
+/* Section de comparaison */
+.ilp-booking-section .expert-comparison-compact {
+  background: rgba(0, 0, 0, 0.6) !important;
+  border: 2px solid rgba(229, 9, 20, 0.2) !important;
+  backdrop-filter: blur(10px) !important;
+  -webkit-backdrop-filter: blur(10px) !important;
+}
+
+.ilp-booking-section .comparison-stat .stat-number {
+  color: #ffffff !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2) !important;
+}
+
+.ilp-booking-section .comparison-stat .stat-label {
+  color: rgba(255, 255, 255, 0.85) !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2) !important;
+}
+
+/* Adaptation du système de réservation pour Instagram Links */
+.ilp-booking-section .booking-system--inline {
+  background: transparent !important;
+  box-shadow: none !important;
+  border: none !important;
+  border-radius: 0 !important;
+}
+
+.ilp-booking-section .booking-system--inline .booking-progress {
+  background: rgba(255, 255, 255, 0.05) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.ilp-booking-section .booking-system--inline .booking-progress-fill {
+  background: linear-gradient(90deg, #E50914, #ff4757) !important;
+}
+
+.ilp-booking-section .booking-system--inline .booking-progress-text {
+  color: rgba(255, 255, 255, 0.8) !important;
+}
+
+.ilp-booking-section .booking-step-container {
+  background: rgba(0, 0, 0, 0.5) !important;
+  border: 1px solid rgba(229, 9, 20, 0.2) !important;
+  border-radius: 16px !important;
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  padding: 30px !important;
+  margin-top: 15px;
+}
+
+/* Cards d'experts adaptées - Meilleure lisibilité */
+.ilp-booking-section .expert-cards-container {
+  gap: 16px !important;
+}
+
+.ilp-booking-section .expert-card-modern {
+  background: rgba(0, 0, 0, 0.6) !important;
+  border: 2px solid rgba(229, 9, 20, 0.3) !important;
+  backdrop-filter: blur(15px) !important;
+  -webkit-backdrop-filter: blur(15px) !important;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3) !important;
+}
+
+.ilp-booking-section .expert-card-modern:hover {
+  background: rgba(0, 0, 0, 0.75) !important;
+  border-color: rgba(229, 9, 20, 0.8) !important;
+  box-shadow: 0 6px 24px rgba(229, 9, 20, 0.25) !important;
+}
+
+/* Textes plus lisibles */
+.ilp-booking-section .expert-card-modern .expert-info h3,
+.ilp-booking-section .expert-card-modern .expert-bio-short {
+  color: #ffffff !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3) !important;
+  font-weight: 600 !important;
+}
+
+.ilp-booking-section .expert-card-modern .expert-role-simple,
+.ilp-booking-section .expert-card-modern .expert-experience,
+.ilp-booking-section .expert-card-modern .expert-rating-number,
+.ilp-booking-section .expert-card-modern .expert-rating-simple {
+  color: rgba(255, 255, 255, 0.9) !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2) !important;
+}
+
+/* Boutons d'expert plus visibles */
+.ilp-booking-section .expert-select-button-simple {
+  background: linear-gradient(135deg, #E50914, #ff1a28) !important;
+  color: #ffffff !important;
+  border: none !important;
+  font-weight: 600 !important;
+  text-shadow: none !important;
+  box-shadow: 0 3px 12px rgba(229, 9, 20, 0.3) !important;
+}
+
+.ilp-booking-section .expert-select-button-simple:hover {
+  background: linear-gradient(135deg, #ff1a28, #E50914) !important;
+  transform: translateY(-1px) !important;
+  box-shadow: 0 6px 20px rgba(229, 9, 20, 0.4) !important;
+}
+
+/* Calendrier adapté */
+.ilp-booking-section .booking-calendar .calendar-header,
+.ilp-booking-section .booking-calendar .calendar-container,
+.ilp-booking-section .booking-calendar .time-slots-container,
+.ilp-booking-section .booking-calendar .calendar-footer {
+  background: rgba(255, 255, 255, 0.08) !important;
+  border-color: rgba(255, 255, 255, 0.15) !important;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.ilp-booking-section .booking-calendar .calendar-title,
+.ilp-booking-section .booking-calendar .time-slots-header h3 {
+  color: rgba(255, 255, 255, 0.95) !important;
+}
+
+/* Formulaire adapté */
+.ilp-booking-section .booking-form-container .booking-form-header,
+.ilp-booking-section .booking-form-container .form-section,
+.ilp-booking-section .booking-form-container .form-navigation {
+  background: rgba(255, 255, 255, 0.08) !important;
+  border-color: rgba(255, 255, 255, 0.15) !important;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.ilp-booking-section .form-input,
+.ilp-booking-section .form-textarea {
+  background: rgba(255, 255, 255, 0.1) !important;
+  border-color: rgba(255, 255, 255, 0.2) !important;
+  color: rgba(255, 255, 255, 0.95) !important;
+}
+
+.ilp-booking-section .form-input::placeholder,
+.ilp-booking-section .form-textarea::placeholder {
+  color: rgba(255, 255, 255, 0.5) !important;
+}
+
+/* Confirmation adaptée */
+.ilp-booking-section .confirmation-container .confirmation-header,
+.ilp-booking-section .confirmation-container .booking-summary,
+.ilp-booking-section .confirmation-container .next-steps,
+.ilp-booking-section .confirmation-container .quick-actions,
+.ilp-booking-section .confirmation-container .preparation-tips,
+.ilp-booking-section .confirmation-container .confirmation-actions {
+  background: rgba(255, 255, 255, 0.08) !important;
+  border-color: rgba(255, 255, 255, 0.15) !important;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+/* Responsive pour le système de réservation */
+@media (max-width: 768px) {
+  .ilp-container {
+    padding: 0 8px;
+    max-width: 100%;
+  }
+  
+  .ilp-link-button.ilp-booking-section {
+    width: 100%;
+    max-width: none;
+    padding: 20px 16px;
+    margin: 0 0 16px 0;
+  }
+  
+  .modern-booking-container {
+    margin-top: 16px;
+    width: 100%;
+  }
+  
+  .ilp-booking-section .ilp-link-title {
+    font-size: 20px !important;
+  }
+  
+  .ilp-booking-section .ilp-link-description {
+    font-size: 15px !important;
+    margin-bottom: 20px !important;
+  }
+  
+  .ilp-booking-section .booking-step-container {
+    padding: 16px !important;
+  }
+  
+  .ilp-booking-section .expert-cards-container {
+    gap: 12px !important;
+  }
+  
+  /* Élargir toutes les sections sur mobile */
+  .ilp-link-button {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 0 16px 0 !important;
+  }
+  
+  .ilp-main-links {
+    padding: 20px 0 !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .ilp-container {
+    padding: 0 4px;
+    max-width: 100%;
+  }
+  
+  .ilp-link-button.ilp-booking-section {
+    width: 100%;
+    padding: 12px 12px;
+    margin: 0 0 12px 0;
+  }
+  
+  .ilp-booking-section .ilp-link-title {
+    font-size: 18px !important;
+  }
+  
+  .ilp-booking-section .ilp-link-description {
+    font-size: 14px !important;
+    margin-bottom: 16px !important;
+  }
+  
+  .ilp-booking-section .booking-step-container {
+    padding: 12px !important;
+  }
+  
+  .ilp-booking-section .expert-card-modern {
+    padding: 12px !important;
+  }
+  
+  /* Élargir toutes les sections sur très petit mobile */
+  .ilp-link-button {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 0 12px 0 !important;
+    padding: 12px !important;
+  }
+  
+  .ilp-main-links {
+    padding: 16px 0 !important;
+  }
+}
+
+/* Header */
+.ilp-header {
+  text-align: center;
+  margin-bottom: 15px;
+  padding: 10px 0;
+}
+
+.ilp-logo-wrapper {
+  width: 180px;
+  height: 180px;
+  margin: 0 auto 20px;
+  border-radius: 50%;
+  padding: 30px;
+  background: black;
+  box-shadow: 0 8px 32px rgba(229, 9, 20, 0.3);
+  animation: pulse 2s infinite;
+}
+
+.ilp-logo {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.ilp-title {
+  font-size: 28px;
+  font-weight: 700;
+  color: white;
+  margin: 0 0 15px;
+  letter-spacing: -0.5px;
+}
+
+.ilp-bio {
+  font-size: 16px;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.85);
+  margin: 0;
+}
+
+/* Main Links */
+.ilp-main-links {
+  margin-bottom: 15px;
+  padding: 40px 0;
+}
+
+.ilp-link-button {
+  display: block;
+  width: 90%;
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 18px 24px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 2px solid rgba(255, 255, 255, 0.15);
+  border-radius: 12px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+
+/* Section booking plus large avec meilleure lisibilité */
+.ilp-link-button.ilp-booking-section {
+  width: 100%;
+  max-width: 100%;
+  padding: 24px 20px;
+}
+
+.ilp-link-button:hover {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: #E50914;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(229, 9, 20, 0.3);
+}
+
+.ilp-link-button.ilp-primary {
+  background: linear-gradient(135deg, #E50914 0%, #ff1a28 100%);
+  border: 2px solid #E50914;
+  position: relative;
+  overflow: hidden;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  box-shadow: 0 8px 25px rgba(229, 9, 20, 0.4);
+}
+
+.ilp-link-button.ilp-primary::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  transition: left 0.6s ease;
+}
+
+.ilp-link-button.ilp-primary:hover::before {
+  left: 100%;
+}
+
+.ilp-link-button.ilp-primary:hover {
+  background: linear-gradient(135deg, #ff1a28 0%, #E50914 100%);
+  box-shadow: 0 15px 40px rgba(229, 9, 20, 0.6);
+  transform: translateY(-3px);
+  border-color: #ff1a28;
+}
+
+.ilp-link-title {
+  display: block;
+  font-size: 20px;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 6px;
+  position: relative;
+  z-index: 2;
+}
+
+.ilp-link-description {
+  display: block;
+  font-size: 15px;
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: 500;
+  position: relative;
+  z-index: 2;
+}
+
+/* Blog Section */
+.ilp-blog-section {
+  margin-bottom: 15px;
+  padding: 40px 0;
+}
+
+.ilp-section-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: white;
+  margin: 0 0 18px;
+  text-align: center;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.ilp-section-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background: #E50914;
+  border-radius: 2px;
+}
+
+/* Articles Grid */
+.ilp-articles-grid {
+  display: grid;
+  gap: 8px;
+}
+
+.ilp-article-card {
+  display: flex;
+  gap: 12px;
+  padding: 12px;
+  background: rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 10px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  overflow: hidden;
+  backdrop-filter: blur(10px);
+}
+
+.ilp-article-card:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: #E50914;
+  transform: translateX(4px);
+}
+
+.ilp-article-image {
+  flex-shrink: 0;
+  width: 100px;
+  height: 100px;
+  border-radius: 8px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.ilp-article-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.ilp-article-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.ilp-article-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: white;
+  margin: 0 0 8px;
+  line-height: 1.3;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.ilp-article-date {
+  font-size: 12px;
+  color: #E50914;
+  margin: 0 0 8px;
+  font-weight: 500;
+}
+
+.ilp-article-description {
+  font-size: 14px;
+  color: #ffffff;
+  margin: 0;
+  line-height: 1.5;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  font-weight: 400;
+  font-style: italic;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* Loading & Error States */
+.ilp-loading {
+  text-align: center;
+  padding: 40px;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.ilp-loading-spinner {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  border: 3px solid rgba(255, 255, 255, 0.1);
+  border-top-color: #E50914;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: 16px;
+}
+
+.ilp-error {
+  text-align: center;
+  padding: 40px;
+  color: #E50914;
+  background: rgba(229, 9, 20, 0.1);
+  border-radius: 12px;
+}
+
+/* Social Section */
+.ilp-social-section {
+  margin-bottom: 10px;
+}
+
+.ilp-social-links {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+}
+
+.ilp-social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 54px;
+  height: 54px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 2px solid rgba(255, 255, 255, 0.15);
+  border-radius: 50%;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  color: white;
+}
+
+.ilp-social-link:hover {
+  background: #E50914;
+  border-color: #E50914;
+  transform: translateY(-4px) scale(1.1);
+  box-shadow: 0 8px 24px rgba(229, 9, 20, 0.4);
+  color: white;
+}
+
+.ilp-social-icon {
+  font-size: 24px;
+}
+
+/* Section Calendly */
+.ilp-calendly-section {
+  padding: 16px !important;
+  background: transparent !important;
+  border: none !important;
+  cursor: default !important;
+}
+
+.ilp-calendly-section:hover {
+  background: transparent !important;
+  border: none !important;
+  transform: none !important;
+}
+
+.ilp-calendly-section .expert-selector-collapsed {
+  margin-top: 8px;
+}
+
+.ilp-calendly-section .expert-selector {
+  margin-top: 16px;
+  padding: 0;
+  max-width: 100%;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.ilp-calendly-section .expand-button {
+  border-radius: 8px;
+}
+
+.ilp-calendly-section .expert-cards {
+  gap: 12px;
+}
+
+.ilp-calendly-section .expert-card {
+  padding: 16px;
+  font-size: 14px;
+}
+
+.ilp-calendly-section .expert-card-header {
+  margin-bottom: 12px;
+}
+
+
+.ilp-calendly-section .expert-info h3 {
+  font-size: 16px;
+  margin-bottom: 2px;
+}
+
+.ilp-calendly-section .expert-specialty {
+  font-size: 12px;
+  padding: 2px 6px;
+}
+
+.ilp-calendly-section .expert-description {
+  font-size: 13px;
+  margin-bottom: 12px;
+}
+
+.ilp-calendly-section .expert-select-btn {
+  padding: 8px 16px;
+  font-size: 14px;
+}
+
+/* Responsive pour section Calendly */
+@media (max-width: 768px) {
+  .ilp-calendly-section .expert-cards {
+    grid-template-columns: 1fr;
+  }
+  
+  .ilp-calendly-section .expert-selector-header {
+    margin-bottom: 20px;
+  }
+  
+  .ilp-calendly-section .expert-selector-header h2 {
+    font-size: 20px;
+  }
+  
+  .ilp-calendly-section .expert-selector-header p {
+    font-size: 14px;
+  }
+}
+
+/* Footer */
+.ilp-footer {
+  text-align: center;
+  padding: 30px 0 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  margin-top: 50px;
+}
+
+.ilp-footer p {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.5);
+  margin: 0;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* === NEWSLETTER FORM STYLE === */
+.ilp-newsletter-link {
+  flex-direction: column;
+  padding: 18px 24px; /* Même padding que les autres boutons */
+  background: rgba(0, 0, 0, 0.4) !important;
+  cursor: default !important;
+  border: 2px solid rgba(255, 255, 255, 0.15); /* Même bordure que les autres */
+  max-height: 200px;
+  overflow: hidden;
+  /* Hérite de la largeur de .ilp-link-button : 85% width, max-width: 400px */
+}
+
+.ilp-newsletter-link .ilp-link-title {
+  margin-bottom: 2px;
+}
+
+.ilp-newsletter-link:hover {
+  transform: none !important;
+  background: rgba(0, 0, 0, 0.4) !important;
+  border-color: rgba(255, 255, 255, 0.2) !important;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3) !important;
+}
+
+.newsletter-form-wrapper {
+  margin-top: 0px;
+  width: 100%;
+}
+
+.newsletter-form {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.newsletter-input-group {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+
+.newsletter-input {
+  flex: 1;
+  padding: 6px 10px;
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid transparent;
+  border-radius: 4px;
+  font-size: 14px;
+  color: #333;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.newsletter-input:focus {
+  background: white;
+  border-color: #E50914;
+  box-shadow: 0 0 0 2px rgba(229, 9, 20, 0.1);
+}
+
+.newsletter-input::placeholder {
+  color: #666;
+}
+
+.newsletter-submit {
+  padding: 6px 12px;
+  background: linear-gradient(135deg, #E50914 0%, #cc0811 100%);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.newsletter-submit:hover:not(:disabled) {
+  background: linear-gradient(135deg, #ff1a28 0%, #E50914 100%);
+  box-shadow: 0 5px 15px rgba(229, 9, 20, 0.4);
+  transform: translateY(-2px);
+}
+
+.newsletter-submit:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.newsletter-success {
+  padding: 5px 8px;
+  background: rgba(76, 175, 80, 0.2);
+  border: 1px solid rgba(76, 175, 80, 0.5);
+  border-radius: 4px;
+  color: #4caf50;
+  text-align: center;
+  font-size: 12px;
+}
+
+.newsletter-error {
+  padding: 5px 8px;
+  background: rgba(244, 67, 54, 0.2);
+  border: 1px solid rgba(244, 67, 54, 0.5);
+  border-radius: 4px;
+  color: #f44336;
+  text-align: center;
+  font-size: 12px;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 480px) {
+  .ilp-container {
+    padding: 0 10px;
+  }
+  
+  .ilp-logo-wrapper {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .ilp-title {
+    font-size: 24px;
+  }
+  
+  .ilp-bio {
+    font-size: 14px;
+  }
+  
+  .ilp-article-card {
+    flex-direction: column;
+  }
+  
+  .ilp-article-image {
+    width: 100%;
+    height: 180px;
+  }
+  
+  .ilp-social-link {
+    width: 48px;
+    height: 48px;
+  }
+  
+  .ilp-social-icon {
+    font-size: 20px;
+  }
+  
+  /* Newsletter mobile */
+  .ilp-newsletter-link {
+    padding: 18px;
+  }
+  
+  .newsletter-input-group {
+    flex-direction: column;
+    gap: 5px;
+  }
+  
+  .newsletter-input, 
+  .newsletter-submit {
+    width: 100%;
+    font-size: 16px; /* Évite le zoom sur iOS */
+  }
+}
+
+/* Tablet Responsiveness */
+@media (min-width: 481px) and (max-width: 768px) {
+  .ilp-article-image {
+    width: 120px;
+    height: 120px;
+  }
+}
+
+/* Dark Mode Enhancements */
+@media (prefers-color-scheme: dark) {
+  .instagram-link-page {
+    background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+  }
+}
