@@ -21,8 +21,7 @@ WORKDIR /app
 COPY package*.json ./
 
 # Installer TOUTES les dépendances (dev incluses pour le build)
-# npm ci requires lockfile to be exactly in sync; in CI this is desired.
-RUN npm ci
+RUN npm install
 
 # Copier le code source
 COPY . .
